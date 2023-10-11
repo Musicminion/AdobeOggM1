@@ -503,7 +503,7 @@ exSDKExport(
 	int audioChannels = (audioFormat == kPrAudioChannelType_51 ? 6 :
 								audioFormat == kPrAudioChannelType_Mono ? 1 :
 								2);
-
+    PrAudioChannelLabel* audioLabel = (PrAudioChannelLabel*)channelTypeP.value.intValue;
 	if(fileType == Ogg_ID)
 	{
 		exParamValues audioMethodP, audioQualityP, audioBitrateP;
@@ -543,7 +543,8 @@ exSDKExport(
 				csSDK_uint32 audioRenderID = 0;
 				result = audioSuite->MakeAudioRenderer(exID,
 														exportInfoP->startTime,
-														audioFormat,
+                                                        audioChannels,
+                                                        audioLabel,
 														kPrAudioSampleType_32BitFloat,
 														sampleRateP.value.floatValue, 
 														&audioRenderID);
@@ -737,7 +738,8 @@ exSDKExport(
 				csSDK_uint32 audioRenderID = 0;
 				result = audioSuite->MakeAudioRenderer(exID,
 														exportInfoP->startTime,
-														audioFormat,
+														audioChannels,
+                                                        audioLabel,
 														kPrAudioSampleType_32BitFloat,
 														sample_rate, 
 														&audioRenderID);
@@ -1002,7 +1004,8 @@ exSDKExport(
 		csSDK_uint32 audioRenderID = 0;
 		result = audioSuite->MakeAudioRenderer(exID,
 												exportInfoP->startTime,
-												audioFormat,
+												audioChannels,
+                                                audioLabel,
 												kPrAudioSampleType_32BitFloat,
 												sampleRateP.value.floatValue, 
 												&audioRenderID);
@@ -1739,9 +1742,9 @@ exSDKGetParamSummary(
 	stream3 << "stream3";
 	
 
-	utf16ncpy(summaryRecP->Summary1, summary1.c_str(), 255);
-	utf16ncpy(summaryRecP->Summary2, summary2.c_str(), 255);
-	utf16ncpy(summaryRecP->Summary3, summary3.c_str(), 255);
+    utf16ncpy(&summaryRecP->audioSummary[0], summary1.c_str(), 255);
+	utf16ncpy(&summaryRecP->audioSummary[1], summary2.c_str(), 255);
+	utf16ncpy(&summaryRecP->audioSummary[2], summary3.c_str(), 255);
 	
 	return malNoError;
 }
