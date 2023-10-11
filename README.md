@@ -1,29 +1,16 @@
-AdobeOgg
+AdobeOggM1
 ========
 
-This is a project where I'm building plug-ins for the [Ogg](http://www.xiph.org/ogg/) container format to be used inside the various Adobe applications.
-
-Right now there are working [Ogg Vorbis](http://www.vorbis.com/) and [Theora](http://www.theora.org/) plug-ins for Premiere Pro, considered to be a beta release.
-
-The Vorbis plug-in includes support for [Ogg Opus](http://opus-codec.org/) and [FLAC](http://xiph.org/flac/) as well.
-
+Extremely rough fixes to get AdobeOgg to compile and run on native Apple Silicon
 
 Download
 --------
-Here are the latest binaries:
-
-**Ogg Vorbis for Premiere Pro** _v0.5b6, 30 January 2015_
-[Mac](http://www.fnordware.com/downloads/Ogg_v0.5b6_mac.zip) | [Win](http://www.fnordware.com/downloads/Ogg_v0.5b6_win.zip)
-
-**Theora for Premiere Pro** _v0.5b5, 7 March 2014_
-[Mac](http://www.fnordware.com/downloads/Theora_v0.5b5_mac.zip) | [Win](http://www.fnordware.com/downloads/Theora_v0.5b5_win.zip)
-
+Download the latest (and likely only) build [here](https://github.com/Coolguy1260/AdobeOggM1/releases/download/v0.5b6_m1/Ogg.Premiere.zip)
 
 License
 -------
 BSD
 
-
-Author
+Original Author
 ------
 Brendan Bolles
