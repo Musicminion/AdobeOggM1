@@ -1,0 +1,5 @@
+//
+// Prefix header for all source files of the 'SDK_Exporter' target in the 'SDK_Exporter' project.
+//
+
+#include <Cocoa/Cocoa.h>

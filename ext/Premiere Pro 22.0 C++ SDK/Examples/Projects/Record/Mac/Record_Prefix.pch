@@ -1,0 +1,5 @@
+//
+// Prefix header for all source files of the 'Record' target in the 'Record' project.
+//
+
+#include <Cocoa/Cocoa.h>
