@@ -464,7 +464,7 @@
 		4FADC23808B4156C00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -480,14 +480,14 @@
 				);
 				PREBINDING = NO;
 				PREMIERE_SDK = "\"../../ext/Premiere Pro 22.0 C++ SDK\"";
-				SDKROOT = macosx14.0;
+				SDKROOT = macosx14.2;
 			};
 			name = Debug;
 		};
 		4FADC23908B4156C00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -503,7 +503,7 @@
 				);
 				PREBINDING = NO;
 				PREMIERE_SDK = "\"../../ext/Premiere Pro 22.0 C++ SDK\"";
-				SDKROOT = macosx14.0;
+				SDKROOT = macosx14.2;
 			};
 			name = Release;
 		};
