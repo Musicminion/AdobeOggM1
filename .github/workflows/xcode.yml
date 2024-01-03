@@ -25,3 +25,9 @@ jobs:
           cd xcode/xcode3
           xcodebuild -project Ogg_Premiere.xcodeproj
           ls 
+      # 上传Build文件
+      - name: Upload Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: Ogg_Premiere
+          path: xcode/xcode3/build
